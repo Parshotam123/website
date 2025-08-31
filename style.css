@@ -3,17 +3,24 @@
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #1fc01f;
+      /* color: #333; */
     }
     header {
-      background: #076e07;
-      color: white;
-      padding: 20px;
+      background: #328d4a;
+      color: rgb(213, 235, 17);
+      padding: 5px;
+      background-size: cover;
       text-align: center;
+      font-style: normal;
+      font-weight: bolder;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    header h1{
+      font-size: 70px;
     }
     nav {
-      background: #228B22;
+      background: #356435;
       display: flex;
       justify-content: center;
     }
@@ -22,25 +29,45 @@
       text-decoration: none;
       padding: 14px 20px;
       display: block;
+      margin-left: 90px;
     }
     nav a:hover {
       background: #145214;
     }
+    .topImg{
+      width: 100%;
+      height: 350px;
+    }
+    h2{
+      margin-left: 20px;
+    }
+    p{
+      /* background-color: #328d4a; */
+      /* margin-left: 50px; */
+      padding-left: 45px;
+      padding-right: 45px;
+      /* margin-right: 50px; */
+    }
+    /* .d-block {
+      height: 250px;
+      size: 100%;
+    } */
     .container {
-      width: 80%;
+      width: 95%;
       margin: auto;
       overflow: hidden;
-      padding: 20px;
+      padding: 15px;
     }
     .card {
-      background: white;
-      margin: 20px 0;
+      /* background: rgb(74, 148, 76); */
+      margin: 10px 0;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border: 3px;
+      /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
     }
     footer {
-      background: #006400;
+      background: #108010;
       color: white;
       text-align: center;
       padding: 10px;
