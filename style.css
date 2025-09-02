@@ -1,75 +1,207 @@
- body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #1fc01f;
-      /* color: #333; */
-    }
-    header {
-      background: #328d4a;
-      color: rgb(213, 235, 17);
-      padding: 5px;
-      background-size: cover;
-      text-align: center;
-      font-style: normal;
-      font-weight: bolder;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    header h1{
-      font-size: 70px;
-    }
-    nav {
-      background: #356435;
-      display: flex;
-      justify-content: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 14px 20px;
-      display: block;
-      margin-left: 90px;
-    }
-    nav a:hover {
-      background: #145214;
-    }
-    .topImg{
+   html {
+     scroll-behavior: smooth;
+   }
+
+   body {
+     display: flex;
+     flex-direction: column;
+     min-height: 100vh;
+     margin: 0;
+     font-family: Arial, sans-serif;
+   }
+
+   main {
+     background-image: url(./Gemini_Generated_Image_4lp3ev4lp3ev4lp3.png);
+     background-repeat: no-repeat;
+     /* background-size: cover; */
+     height: 2700px;
+     /* width: 100%; */
+     /* width: fit-content; */
+     opacity: 0;
+     animation: fadeIn 1.5s forwards;
+   }
+
+   main p {
+     color: rgb(13, 105, 243);
+   }
+
+   header {
+     /* background: #328d4a; */
+     color: rgb(213, 235, 17);
+     padding: 5px;
+     background-size: cover;
+     text-align: center;
+     font-style: normal;
+     font-weight: bolder;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     background-image: url(./Gemini_Generated_Image_4lp3ev4lp3ev4lp3.png);
+     height: 100px;
+   }
+
+   header h1 {
+     font-size: 70px;
+   }
+
+   nav {
+     background: #356435;
+     display: flex;
+     justify-content: center;
+   }
+
+   /* nav a {
+     color: white;
+     text-decoration: none;
+     padding: 14px 20px;
+     display: block;
+     margin-left: 90px;
+   }
+
+   nav a:hover {
+     background: #145214;
+   } */
+   nav a {
+     color: white;
+     text-decoration: none;
+     padding: 14px 20px;
+     display: block;
+     margin-left: 90px;
+     position: relative;
+     /* This is key for the animation */
+     transition: color 0.3s ease;
+   }
+
+   nav a::after {
+     content: '';
+     position: absolute;
+     width: 0;
+     height: 2px;
+     bottom: 0;
+     left: 0;
+     background-color: white;
+     transition: width 0.3s ease;
+   }
+
+   nav a:hover {
+     background: #145214;
+     color: #fff;
+   }
+
+   nav a:hover::after {
+     width: 100%;
+   }
+
+   .d-block {
+     height: 400px;
+   }
+
+   /* .topImg{
       width: 100%;
       height: 350px;
-    }
-    h2{
-      margin-left: 20px;
-    }
-    p{
-      /* background-color: #328d4a; */
-      /* margin-left: 50px; */
-      padding-left: 45px;
-      padding-right: 45px;
-      /* margin-right: 50px; */
-    }
-    /* .d-block {
+    } */
+   .introduction {
+     color: rgb(228, 244, 5);
+   }
+
+   h2 {
+     margin-left: 20px;
+   }
+
+   p {
+     /* background-color: #328d4a; */
+     /* margin-left: 50px; */
+     padding-left: 45px;
+     padding-right: 45px;
+     /* margin-right: 50px; */
+   }
+
+   /* .d-block {
       height: 250px;
       size: 100%;
     } */
-    .container {
-      width: 95%;
-      margin: auto;
-      overflow: hidden;
-      padding: 15px;
-    }
-    .card {
-      /* background: rgb(74, 148, 76); */
-      margin: 10px 0;
-      padding: 20px;
-      border-radius: 10px;
-      border: 3px;
-      /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
-    }
-    footer {
+   .container {
+     width: 95%;
+     margin: auto;
+     /* overflow: hidden; */
+     padding: 15px;
+   }
+
+   .card {
+     /* background: rgb(74, 148, 76); */
+     margin: 10px 0;
+     padding: 20px;
+     border-radius: 10px;
+     border: 3px;
+     background-color: rgb(161, 143, 44);
+     /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+   }
+
+   .card:hover {
+     transform: translateY(-5px);
+     /* Lifts the card up by 5px */
+     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+     /* Adds a stronger shadow */
+   }
+
+   /* footer {
       background: #108010;
       color: white;
       text-align: center;
       padding: 10px;
       margin-top: 20px;
-    }
+    } */
+
+   .site-footer {
+     background-color: #333;
+     color: #fff;
+     padding: 20px;
+     text-align: center;
+     width: 100%;
+     box-sizing: border-box;
+     /* Ensures padding doesn't add to the width */
+   }
+
+   .footer-content {
+     max-width: 1200px;
+     /* Optional: Sets a maximum width for content */
+     margin: 0 auto;
+     /* Centers the content */
+   }
+
+   .social-links {
+     list-style: none;
+     /* Removes bullet points */
+     padding: 0;
+     margin: 10px 0 0;
+     /* Adds some top margin */
+     display: flex;
+     /* Arranges links horizontally */
+     justify-content: center;
+     /* Centers the links */
+     gap: 20px;
+     /* Adds space between the links */
+   }
+
+   .social-links li a {
+     color: #fff;
+     text-decoration: none;
+     /* Removes the underline */
+     font-weight: bold;
+     transition: color 0.3s ease;
+     /* Adds a smooth color transition on hover */
+   }
+
+   .social-links li a:hover {
+     color: #ddd;
+     /* Changes color on hover */
+   }
+
+   @keyframes fadeIn {
+     from {
+       opacity: 0;
+     }
+
+     to {
+       opacity: 1;
+     }
+   }
